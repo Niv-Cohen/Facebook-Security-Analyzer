@@ -1,0 +1,376 @@
+{
+    "name": "Niv Cohen",
+    "friends": {
+        "family": [
+            {
+                "name": "Yossi Cohen",
+                "friends": {
+                    "family": [
+                        {
+                            "name": "Chen Shrem",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "education": "Studied at \u05d2\u05d9\u05de\u05e0\u05e1\u05d9\u05d4 \u05d0\u05e4\u05e8\u05d9\u05dd \u05e7\u05e6\u05d9\u05e8, \u05d7\u05d5\u05dc\u05d5\u05df",
+                                    "current_town": "Lives in Holon, Israel",
+                                    "homeTown": "From Holon, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 0
+                            },
+                            "user": {
+                                "total_friends": 1412,
+                                "age_of_account": 4074
+                            }
+                        }
+                    ],
+                    "childhood_friends": [
+                        {
+                            "name": "Asaf Cohen",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "current_town": "Lives in Holon, Israel",
+                                    "homeTown": "From Holon, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 17
+                            },
+                            "user": {
+                                "total_friends": 892,
+                                "age_of_account": 3344
+                            }
+                        },
+                        {
+                            "name": "Itay Moshe",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "education": "Went to Gimnasia Efraim Katzir",
+                                    "current_town": "Lives in Holon, Israel",
+                                    "homeTown": "From Holon, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 4
+                            },
+                            "user": {
+                                "total_friends": 556,
+                                "age_of_account": 4439
+                            }
+                        }
+                    ],
+                    "neighbors": [],
+                    "colleague": [],
+                    "co_students": []
+                },
+                "connection": {
+                    "attributes": {
+                        "work": "Works at \u05e2\u05e6\u05de\u05d0\u05d9",
+                        "education": "Went to Gimnasia Efraim Katzir",
+                        "current_town": "From Holon, Israel"
+                    },
+                    "friendship_duration": 3831,
+                    "mutual_friends": 0
+                },
+                "user": {
+                    "total_friends": 1071,
+                    "age_of_account": 4074
+                }
+            }
+        ],
+        "childhood_friends": [],
+        "neighbors": [
+            {
+                "name": "Noa Kenner",
+                "friends": {
+                    "family": [],
+                    "childhood_friends": [],
+                    "neighbors": [
+                        {
+                            "name": "\u05e0\u05e6\u05d9\u05d2 \u05d0\u05d2\u05d5\u05d3\u05d4",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "Technical Support Representative at \u05d4\u05d0\u05d2\u05d5\u05d3\u05d4 \u05d4\u05e1\u05d8\u05d5\u05d3\u05e0\u05d8\u05d9\u05d0\u05dc\u05d9\u05ea \u05d1\u05df-\u05d2\u05d5\u05e8\u05d9\u05d5\u05df",
+                                    "education": "Studied at \u05d0\u05d5\u05e0\u05d9\u05d1\u05e8\u05e1\u05d9\u05d8\u05ea \u05d1\u05df-\u05d2\u05d5\u05e8\u05d9\u05d5\u05df \u05d1\u05e0\u05d2\u05d1",
+                                    "current_town": "Lives in Beersheba, Israel",
+                                    "homeTown": "From Beersheba, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 1
+                            },
+                            "user": {
+                                "total_friends": 69,
+                                "age_of_account": 56
+                            }
+                        }
+                    ],
+                    "colleague": [
+                        {
+                            "name": "Illan Hanadari Freedman",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "\u05e8\u05db\u05d6 \u05de\u05e2\u05d5\u05e8\u05d1\u05d5\u05ea at \u05d4\u05d0\u05d2\u05d5\u05d3\u05d4 \u05d4\u05e1\u05d8\u05d5\u05d3\u05e0\u05d8\u05d9\u05d0\u05dc\u05d9\u05ea \u05d1\u05df-\u05d2\u05d5\u05e8\u05d9\u05d5\u05df\n15 June 2020 to present",
+                                    "education": "Studies Political Science/Sociology at Ben-Gurion University of the Negev\nStarted in 2019",
+                                    "current_town": "Lives in Beersheba, Israel",
+                                    "homeTown": "From Nazareth Illit"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 5
+                            },
+                            "user": {
+                                "total_friends": 1420,
+                                "age_of_account": 2613
+                            }
+                        }
+                    ],
+                    "co_students": [
+                        {
+                            "name": "Tzvi Langer",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "Works at Lusha and Verbit.ai",
+                                    "education": "Studied at Ben-Gurion University of the Negev"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 15
+                            },
+                            "user": {
+                                "total_friends": -1,
+                                "age_of_account": 3344
+                            }
+                        }
+                    ]
+                },
+                "connection": {
+                    "attributes": {
+                        "work": "Marketing Manager at \u05d4\u05d0\u05d2\u05d5\u05d3\u05d4 \u05d4\u05e1\u05d8\u05d5\u05d3\u05e0\u05d8\u05d9\u05d0\u05dc\u05d9\u05ea \u05d1\u05df-\u05d2\u05d5\u05e8\u05d9\u05d5\u05df\nPast: \u05e8\u05d3\u05d9\u05d5 \u05d3\u05e8\u05d5\u05dd",
+                        "education": "Studies \u263a\ufe0fM.A\ud83e\udd13 at Ben-Gurion University of the Negev\nStarted in 2019",
+                        "current_town": "Lives in Beersheba, Israel",
+                        "homeTown": "From Rosh Ha`Ayin, Hamerkaz, Israel"
+                    },
+                    "friendship_duration": 178,
+                    "mutual_friends": 4
+                },
+                "user": {
+                    "total_friends": 979,
+                    "age_of_account": 787
+                }
+            }
+        ],
+        "colleague": [
+            {
+                "name": "Lior Duani",
+                "friends": {
+                    "family": [
+                        {
+                            "name": "Amos Duani",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "Self-employed",
+                                    "education": "Studied Accountancy at Tel Aviv University | \u05d0\u05d5\u05e0\u05d9\u05d1\u05e8\u05e1\u05d9\u05d8\u05ea \u05ea\u05dc-\u05d0\u05d1\u05d9\u05d1\nAttended from 1983 to 1988",
+                                    "current_town": "Lives in Hod HaSharon",
+                                    "homeTown": "From Hod HaSharon"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 0
+                            },
+                            "user": {
+                                "total_friends": 198,
+                                "age_of_account": 2613
+                            }
+                        }
+                    ],
+                    "childhood_friends": [
+                        {
+                            "name": "Moshe Hanoka",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "\u05d7\u05d1\u05e8 at \u05de\u05d5\u05e2\u05e6\u05ea \u05d4\u05e2\u05d9\u05e8 \u05d4\u05d5\u05d3 \u05d4\u05e9\u05e8\u05d5\u05df and works for \u05d9\u05d5\u05e2\u05e5 \u05d4\u05e9\u05e8 at \u05de\u05e9\u05e8\u05d3 \u05d4\u05db\u05dc\u05db\u05dc\u05d4 \u05d5\u05d4\u05ea\u05e2\u05e9\u05d9\u05d9\u05d4 and \u05d9\u05d5\"\u05e8 \u05d4\u05d3\u05d9\u05e8\u05e7\u05d8\u05d5\u05e8\u05d9\u05d5\u05df at \u05d7\u05d1\u05e8\u05ea \u05d1\u05d9\u05ea \u05d0\u05e8\u05dc\u05d5\u05d6\u05d5\u05e8\u05d5\u05d1\nPast: Weinberger Bertental, Law Firm '\u05d5\u05d9\u05d9\u05e0\u05d1\u05e8\u05d2\u05e8 \u05d1\u05e8\u05d8\u05e0\u05d8\u05dc \u05d5\u05e9\u05d5\u05ea",
+                                    "education": "Studied \u05de\u05e9\u05e4\u05d8\u05d9\u05dd at \u05e9\u05e2\u05e8\u05d9 \u05de\u05e9\u05e4\u05d8\nAttended from 2010 to 2011",
+                                    "current_town": "Lives in Hod HaSharon",
+                                    "homeTown": "From Hod HaSharon"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 6
+                            },
+                            "user": {
+                                "total_friends": 4970,
+                                "age_of_account": 4805
+                            }
+                        }
+                    ],
+                    "neighbors": [],
+                    "colleague": [
+                        {
+                            "name": "Carmel Assaf",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "Fronted Developer at Sexence and Manager at rebar\nPast: Israel Defense Forces",
+                                    "education": "Studied at \u05d4\u05de\u05e8\u05db\u05d6 \u05d4\u05d0\u05e7\u05d3\u05de\u05d9 \u05e8\u05d5\u05e4\u05d9\u05df",
+                                    "current_town": "Lives in Hod HaSharon",
+                                    "homeTown": "From Haifa, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 5
+                            },
+                            "user": {
+                                "total_friends": 2186,
+                                "age_of_account": 3344
+                            }
+                        }
+                    ],
+                    "co_students": [
+                        {
+                            "name": "Noam Friedstein",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "Works at Israel Defense Forces",
+                                    "education": "Studied at Hadarim High School"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 5
+                            },
+                            "user": {
+                                "total_friends": -1,
+                                "age_of_account": 2978
+                            }
+                        }
+                    ]
+                },
+                "connection": {
+                    "attributes": {
+                        "work": "Works at Israel Defense Forces",
+                        "education": "Studied at Hadarim High School",
+                        "current_town": "Lives in Hod HaSharon",
+                        "homeTown": "From Hod HaSharon"
+                    },
+                    "friendship_duration": 697,
+                    "mutual_friends": 17
+                },
+                "user": {
+                    "total_friends": 394,
+                    "age_of_account": 4074
+                }
+            }
+        ],
+        "co_students": [
+            {
+                "name": "Shir Gaash",
+                "friends": {
+                    "family": [
+                        {
+                            "name": "Chen Gaash",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "current_town": "Lives in Tel Aviv, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 0
+                            },
+                            "user": {
+                                "total_friends": 685,
+                                "age_of_account": 4074
+                            }
+                        }
+                    ],
+                    "childhood_friends": [],
+                    "neighbors": [
+                        {
+                            "name": "Karin Freeman",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "\u05e2\u05d5\u05e8\u05db\u05ea \u05d3\u05d9\u05df at \u05d1\u05e8-\u05de\u05d5\u05d7\u05d0, \u05de\u05e9\u05e8\u05d3 \u05e2\u05d5\u05e8\u05db\u05d9-\u05d3\u05d9\u05df\n1 July 2020 to present",
+                                    "education": "Studied at College of Management Academic Studies",
+                                    "current_town": "Lives in Tel Aviv, Israel",
+                                    "homeTown": "From Holon, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 15
+                            },
+                            "user": {
+                                "total_friends": 3016,
+                                "age_of_account": 4439
+                            }
+                        }
+                    ],
+                    "colleague": [
+                        {
+                            "name": "Shira Prigat",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "Works at Beewise Technologies\nPast: Homrun and BE ALL",
+                                    "education": "Studied at Tel Aviv University | \u05d0\u05d5\u05e0\u05d9\u05d1\u05e8\u05e1\u05d9\u05d8\u05ea \u05ea\u05dc-\u05d0\u05d1\u05d9\u05d1\nAttended from 2013 to 2015",
+                                    "current_town": "Lives in Shavei Zion",
+                                    "homeTown": "From Beit El`Azari, Hamerkaz, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 3
+                            },
+                            "user": {
+                                "total_friends": 2729,
+                                "age_of_account": 0
+                            }
+                        }
+                    ],
+                    "co_students": [
+                        {
+                            "name": "Ori Bergman",
+                            "friends": {},
+                            "connection": {
+                                "attributes": {
+                                    "work": "Works at Biggy Z - \u05d1\u05d9\u05d2\u05d9 \u05d6\u05d9\nPast: \u05d1\u05e8\u05e7\u05d4 \u05e8\u05d1\u05d9\u05e2\u05d9 \u05dc\u05d9\u05d9\u05df \u05e1\u05d8\u05d5\u05d3\u05e0\u05d8\u05d9\u05dd and \u05e6\u05e2\u05e6\u05d5\u05e2 \u05d1\u05e8 \u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd",
+                                    "education": "Studied at Ben-Gurion University of the Negev\nAttended from 2014 to 2017",
+                                    "current_town": "Lives in Tel Aviv, Israel",
+                                    "homeTown": "From Mevasseret Yerushalayim, Yerushalayim, Israel"
+                                },
+                                "friendship_duration": 0,
+                                "mutual_friends": 3
+                            },
+                            "user": {
+                                "total_friends": 2378,
+                                "age_of_account": 0
+                            }
+                        }
+                    ]
+                },
+                "connection": {
+                    "attributes": {
+                        "work": "Former Blogger at maVeze\nPast: \u05d1\u05ea \u05e2\u05de\u05d9 \u05e9\u05d9\u05e8\u05d5\u05ea \u05dc\u05d0\u05d5\u05de\u05d9 and Giraffe - Haifa",
+                        "education": "Studied at Ben-Gurion University of the Negev\nAttended from 2013 to 2018",
+                        "current_town": "Lives in Tel Aviv, Israel",
+                        "homeTown": "From Pardes Hanah, Hefa, Israel"
+                    },
+                    "friendship_duration": 636,
+                    "mutual_friends": 6
+                },
+                "user": {
+                    "total_friends": 1744,
+                    "age_of_account": 4805
+                }
+            }
+        ]
+    },
+    "connection": {
+        "attributes": {
+            "work": "Works at Israel Defense Forces\nPast: wer",
+            "education": "Studied at Ben-Gurion University of the Negev",
+            "current_town": "Lives in Beersheba, Israel"
+        },
+        "friendship_duration": 0,
+        "mutual_friends": 0
+    },
+    "user": {
+        "total_friends": 1127,
+        "age_of_account": 3455
+    }
+}
