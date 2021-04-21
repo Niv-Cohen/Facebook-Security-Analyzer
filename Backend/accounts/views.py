@@ -46,8 +46,7 @@ class FilterView(APIView):
             user_found = GetUserSerializer(account).data
             print("parse")
             account = parse_user(user_found["network"])
-            print("filter")
-            print(account)
+            # print(account)
             filter_network(data, account)
             return Response(status = status.HTTP_200_OK)
         except Exception as e:

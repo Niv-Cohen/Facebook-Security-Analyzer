@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1>None</h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1000px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "black", "id": "Niv Cohen", "label": "Niv Cohen", "shape": "dot", "size": 10, "value": 20}, {"id": "Yossi Cohen", "label": "Yossi Cohen", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Noa Kenner", "label": "Noa Kenner", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Lior Duani", "label": "Lior Duani", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Shir Gaash", "label": "Shir Gaash", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Chen Shrem", "label": "Chen Shrem", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Asaf Cohen", "label": "Asaf Cohen", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Itay Moshe", "label": "Itay Moshe", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "\u05e0\u05e6\u05d9\u05d2 \u05d0\u05d2\u05d5\u05d3\u05d4", "label": "\u05e0\u05e6\u05d9\u05d2 \u05d0\u05d2\u05d5\u05d3\u05d4", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Illan Hanadari Freedman", "label": "Illan Hanadari Freedman", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Tzvi Langer", "label": "Tzvi Langer", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Amos Duani", "label": "Amos Duani", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Moshe Hanoka", "label": "Moshe Hanoka", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Carmel Assaf", "label": "Carmel Assaf", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Noam Friedstein", "label": "Noam Friedstein", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Chen Gaash", "label": "Chen Gaash", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Karin Freeman", "label": "Karin Freeman", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Shira Prigat", "label": "Shira Prigat", "shape": "dot", "size": 10, "title": "node_title"}, {"id": "Ori Bergman", "label": "Ori Bergman", "shape": "dot", "size": 10, "title": "node_title"}]);
+        edges = new vis.DataSet([{"color": "green", "from": "Niv Cohen", "title": "edge_title", "to": "Yossi Cohen", "value": 2, "weight": 1}, {"color": "red", "from": "Niv Cohen", "title": "edge_title", "to": "Noa Kenner", "value": 2, "weight": 1}, {"color": "red", "from": "Niv Cohen", "title": "edge_title", "to": "Lior Duani", "value": 2, "weight": 1}, {"color": "red", "from": "Niv Cohen", "title": "edge_title", "to": "Shir Gaash", "value": 2, "weight": 1}, {"color": "green", "from": "Yossi Cohen", "title": "edge_title", "to": "Chen Shrem", "value": 2, "weight": 1}, {"color": "green", "from": "Yossi Cohen", "title": "edge_title", "to": "Asaf Cohen", "value": 2, "weight": 1}, {"color": "green", "from": "Yossi Cohen", "title": "edge_title", "to": "Itay Moshe", "value": 2, "weight": 1}, {"color": "red", "from": "Noa Kenner", "title": "edge_title", "to": "\u05e0\u05e6\u05d9\u05d2 \u05d0\u05d2\u05d5\u05d3\u05d4", "value": 2, "weight": 1}, {"color": "red", "from": "Noa Kenner", "title": "edge_title", "to": "Illan Hanadari Freedman", "value": 2, "weight": 1}, {"color": "red", "from": "Noa Kenner", "title": "edge_title", "to": "Tzvi Langer", "value": 2, "weight": 1}, {"color": "red", "from": "Lior Duani", "title": "edge_title", "to": "Amos Duani", "value": 2, "weight": 1}, {"color": "red", "from": "Lior Duani", "title": "edge_title", "to": "Moshe Hanoka", "value": 2, "weight": 1}, {"color": "red", "from": "Lior Duani", "title": "edge_title", "to": "Carmel Assaf", "value": 2, "weight": 1}, {"color": "red", "from": "Lior Duani", "title": "edge_title", "to": "Noam Friedstein", "value": 2, "weight": 1}, {"color": "red", "from": "Shir Gaash", "title": "edge_title", "to": "Chen Gaash", "value": 2, "weight": 1}, {"color": "red", "from": "Shir Gaash", "title": "edge_title", "to": "Karin Freeman", "value": 2, "weight": 1}, {"color": "red", "from": "Shir Gaash", "title": "edge_title", "to": "Shira Prigat", "value": 2, "weight": 1}, {"color": "red", "from": "Shir Gaash", "title": "edge_title", "to": "Ori Bergman", "value": 2, "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

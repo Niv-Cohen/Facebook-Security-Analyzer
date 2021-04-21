@@ -18,9 +18,7 @@ year_not_registered = "//*[contains(text(),'Born on ') or contains(text(),'No po
 
 root_user = "Niv Cohen"
 
-friends_user_xpath = "//span[@class='d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 " \
-                     "nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb mdeji52x a5q79mjw g1cxx5fr" \
-                     " lrazzd5p oo9gr5id']"
+friends_user_xpath = "//span[@class='d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb mdeji52x a5q79mjw g1cxx5fr lrazzd5p oo9gr5id']"
 
 family_member_xpath = "//div[@class='nc684nl6']"
 
@@ -31,14 +29,14 @@ all_users = set([])
 
 def scrap(name, email, password):
     driver = init_sel()
-    #login(driver, email, password)
-    login(driver, "niv1018@gmail.com", "Nfn151294Nfn")
+    # login(driver, email, password)
+    login(driver, email, password)
     time.sleep(5)
     redirect(driver, "Niv Cohen")
     user = extract_user(driver, 0)
-    with open('data.json', 'w') as outfile:
+    with open('BasicGraph.json', 'w') as outfile:
         json.dump(user, outfile, indent = 4,cls = account_encoder)
-    return json.dumps(user, indent=4, cls =account_encoder)
+    return json.dumps(user, indent=4, cls = account_encoder)
 
 
 def init_sel():
@@ -60,19 +58,19 @@ def login(driver, email, password):
     search_button = redirect_by_xpath(driver,"//div[@class='_6ltg']")
     search_button[0].click()
 
+def background_click(driver):
+    time.sleep(0.5)
+    actions = ActionChains(driver)
+    actions.double_click()
+    actions.perform()
+    time.sleep(0.5)
 
 def redirect(driver, next_page, inital_click = True):
-
-
     if inital_click:
-        time.sleep(2)
-        actions = ActionChains(driver)
-        actions.double_click()
-        actions.perform()
-        time.sleep(2)
+        background_click(driver)
 
     try:
-        element = WebDriverWait(driver, 5).until(
+        element = WebDriverWait(driver, 7).until(
             EC.element_to_be_clickable((By.LINK_TEXT, next_page))
         )
         print(element.text)
@@ -93,6 +91,7 @@ def redirect_by_xpath(driver, xpath):
         element = WebDriverWait(driver, sleep_time).until(
             EC.presence_of_all_elements_located((By.XPATH, xpath))
         )
+        print(xpath)
         return element
     finally:
         print(xpath)
@@ -118,16 +117,18 @@ def extract_profile_summary(driver, connection_degree):
     total_friends = extract_total_friends(driver)
     age_of_account = extract_age_of_account(driver, connection_degree)
     print(summary)
+    print("Age: "+str(age_of_account))
     return summary, total_friends, age_of_account
 
 
 def scrap_about(driver, connection_degree):
+    time.sleep(2)
     redirect(driver, "About")
     return extract_profile_summary(driver, connection_degree)
 
 
 def extract_friendship_duration(driver):
-    upper_navigation_bar = redirect_by_xpath(driver, "//div[@class='q3mryazl']/div/div")
+    upper_navigation_bar = redirect_by_xpath(driver, "//div[@class='ku2zlfd4 q3mryazl']/div/div")
     time.sleep(2)
     upper_navigation_bar[len(upper_navigation_bar) - 1].click()
     redirect(driver, 'See friendship', False)
@@ -161,7 +162,7 @@ def scroll_to_bottom(driver, elements_xpath):
 
 
 def extract_root_age(driver):
-    upper_navigation_bar = redirect_by_xpath(driver, "//div[@class='q3mryazl']/div/div")
+    upper_navigation_bar = redirect_by_xpath(driver, "//div[@class='ku2zlfd4 q3mryazl']/div/div")
     '''
     click the 3 dots icon
     '''
@@ -248,10 +249,14 @@ def extract_user(driver, connection_degree, user = None):
     all_users.add(user_name)
     if user:
         redirect(driver, user_name)
+    if user_name == "Gal Rubin" or user_name == "Lior Duani":
+        print("stop")
+
     attributes, total_friends, age_of_account = scrap_about(driver, connection_degree)
     if connection_degree == 1:
         friendship_duration = int(extract_friendship_duration(driver))
         driver.back()
+
     elif connection_degree == 0:
         driver.back()
         driver.back()
@@ -260,6 +265,8 @@ def extract_user(driver, connection_degree, user = None):
         return Account(user_name, {},
                        Connection(attributes, friendship_duration),
                        User(total_friends, age_of_account))
+    if user_name == "Noa Kenner":
+        print("Stop to check ")
     network = scrap_network(driver, connection_degree + 1)
     if connection_degree == 2:
         driver.back()
@@ -278,12 +285,15 @@ def extract_user(driver, connection_degree, user = None):
 def scrap_network(driver, connection_degree):
     friends = {}
     redirect(driver, 'About')
+    time.sleep(1)
     friends['family'] = extract_field_members(driver, connection_degree, 'Family')
-    time.sleep(2)
+    time.sleep(1)
     redirect(driver, 'Friends')
     friends['childhood_friends'] = extract_field_members(driver, connection_degree, 'Home Town')
     friends['childhood_friends'] += extract_field_members(driver, connection_degree, 'High School')
     friends['neighbors'] = extract_field_members(driver, connection_degree, 'Current City')
+    if connection_degree == 1:
+        print("stop")
     friends['colleague'] = extract_field_members(driver, connection_degree, 'Work')
     friends['co_students'] = extract_field_members(driver, connection_degree, 'University')
 
@@ -292,7 +302,7 @@ def scrap_network(driver, connection_degree):
 
 def extract_field_members(driver, connection_degree, field):
     if field == 'Family':
-        redirect(driver, "Family and relationships",False)
+        redirect(driver, "Family and relationships", False)
     else:
         is_exist = redirect(driver, field)
         if is_exist==False:
@@ -303,14 +313,17 @@ def extract_field_members(driver, connection_degree, field):
         members = redirect_by_xpath(driver, family_member_xpath if field == 'Family' else friends_user_xpath)
     except:
         return []
-
     counter = 0
     index = 0
+
     if connection_degree == 1:
         insert_members(members)
-    while index < len(members) and counter < 1:
+
+    while index < len(members) and counter <5:
         members = redirect_by_xpath(driver, family_member_xpath if field == 'Family' else friends_user_xpath)
         time.sleep(1)
+        if members[0].text == '':
+            del members[0]
         if connection_degree != 1 and members[index].text in all_users:
             index += 1
             continue
@@ -318,12 +331,17 @@ def extract_field_members(driver, connection_degree, field):
             field_members.append(extract_user(driver, connection_degree, members[index]))
             time.sleep(2)
             if field != 'Family':
-                mutual_friends_of_members = redirect_by_xpath(driver, "//div[@class='aahdfvyu']")
-                member_mutual_friends = mutual_friends_of_members[index].text
-                member_mutual_friends = member_mutual_friends.replace(' mutual friends', '')
-                member_mutual_friends = member_mutual_friends.replace(' mutual friend', '')
-                member_mutual_friends = int(member_mutual_friends)
-                field_members[counter].set_mutual_friends(member_mutual_friends)
+                try:
+                    mutual_friends_of_members = redirect_by_xpath(driver, "//div[@class='aahdfvyu']")
+                    member_mutual_friends = mutual_friends_of_members[index].text
+                    member_mutual_friends = member_mutual_friends.replace(' mutual friends', '')
+                    member_mutual_friends = member_mutual_friends.replace(' mutual friend', '')
+                    member_mutual_friends = int(member_mutual_friends)
+                    print("mutual friends: "+str(member_mutual_friends))
+                    field_members[counter].set_mutual_friends(member_mutual_friends)
+                except:
+                    background_click(driver)
+                    driver.back()
             counter += 1
             index += 1
     print(field_members)

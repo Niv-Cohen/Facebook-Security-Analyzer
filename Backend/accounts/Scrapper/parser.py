@@ -29,8 +29,8 @@ def parse_user(json_user):
 
 
 if __name__ == '__main__':
-    with open('data.txt') as json_file:
+    with open('BasicGraph.json') as json_file:
         json_user = json.load(json_file)
     account = parse_user(json_user)
-    print(account)
-    filter_network(account)
+    # print(account)
+    filter_network("", account)

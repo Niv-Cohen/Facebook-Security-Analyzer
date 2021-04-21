@@ -36,22 +36,37 @@ class Account:
 
     def set_trust_value(self, threshold: Threshold):
         # Setting UserTrustValue
+
         total_friends_param = 1 if self.user.total_friends > threshold.user_threshold.total_friends \
             else self.user.total_friends / threshold.user_threshold.total_friends
+
         age_of_account_param = 1 if self.user.age_of_account > threshold.user_threshold.age_of_account \
             else self.user.age_of_account / threshold.user_threshold.age_of_account
+
         user_trust_value = (total_friends_param + age_of_account_param) / 2
         # Setting ConnectionTrustValue
+
         friendship_duration_param = 1 if self.connection.friendship_duration > threshold.connection_threshold.friendship_duration \
             else self.connection.friendship_duration / threshold.connection_threshold.friendship_duration
+
         mutual_friends_param = 1 if self.connection.mutual_friends > threshold.connection_threshold.mutual_friends \
             else self.connection.mutual_friends / threshold.connection_threshold.mutual_friends
+
         resemblance_attributes_param = self.calc_resemblance_attributes(threshold.connection_threshold.attributes) \
                                        / len(threshold.connection_threshold.attributes)
+
+
         default_param_addition = mutual_friends_param + resemblance_attributes_param
-        connection_trust_value = (default_param_addition + friendship_duration_param) / 2 \
+
+        connection_trust_value = (default_param_addition + friendship_duration_param) / 3 \
             if friendship_duration_param != 0 else default_param_addition / 2
         # Setting Account Overall Trust Value
+        if self.name == "Yossi Cohen":
+            print("UTV: "+str(user_trust_value))
+            print(threshold.connection_threshold.friendship_duration)
+            print(friendship_duration_param)
+            print("CTV: " + str(connection_trust_value))
+            print("resemblance: " + str(resemblance_attributes_param))
         self.account_trust_value = (user_trust_value + connection_trust_value) / 2
 
     @classmethod

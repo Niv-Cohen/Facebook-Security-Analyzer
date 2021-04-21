@@ -19,8 +19,8 @@
                                 "mutual_friends": 0
                             },
                             "user": {
-                                "total_friends": 1412,
-                                "age_of_account": 4074
+                                "total_friends": 1411,
+                                "age_of_account": 4091
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                             },
                             "user": {
                                 "total_friends": 892,
-                                "age_of_account": 3344
+                                "age_of_account": 3726
                             }
                         },
                         {
@@ -54,8 +54,8 @@
                                 "mutual_friends": 4
                             },
                             "user": {
-                                "total_friends": 556,
-                                "age_of_account": 4439
+                                "total_friends": 555,
+                                "age_of_account": 4456
                             }
                         }
                     ],
@@ -69,12 +69,12 @@
                         "education": "Went to Gimnasia Efraim Katzir",
                         "current_town": "From Holon, Israel"
                     },
-                    "friendship_duration": 3831,
+                    "friendship_duration": 3848,
                     "mutual_friends": 0
                 },
                 "user": {
                     "total_friends": 1071,
-                    "age_of_account": 4074
+                    "age_of_account": 4091
                 }
             }
         ],
@@ -101,7 +101,7 @@
                             },
                             "user": {
                                 "total_friends": 69,
-                                "age_of_account": 56
+                                "age_of_account": 439
                             }
                         }
                     ],
@@ -120,8 +120,8 @@
                                 "mutual_friends": 5
                             },
                             "user": {
-                                "total_friends": 1420,
-                                "age_of_account": 2613
+                                "total_friends": 1427,
+                                "age_of_account": 2630
                             }
                         }
                     ],
@@ -135,11 +135,11 @@
                                     "education": "Studied at Ben-Gurion University of the Negev"
                                 },
                                 "friendship_duration": 0,
-                                "mutual_friends": 15
+                                "mutual_friends": 17
                             },
                             "user": {
                                 "total_friends": -1,
-                                "age_of_account": 3344
+                                "age_of_account": 3361
                             }
                         }
                     ]
@@ -151,12 +151,12 @@
                         "current_town": "Lives in Beersheba, Israel",
                         "homeTown": "From Rosh Ha`Ayin, Hamerkaz, Israel"
                     },
-                    "friendship_duration": 178,
+                    "friendship_duration": 195,
                     "mutual_friends": 4
                 },
                 "user": {
-                    "total_friends": 979,
-                    "age_of_account": 787
+                    "total_friends": 985,
+                    "age_of_account": 1169
                 }
             }
         ],
@@ -180,7 +180,7 @@
                             },
                             "user": {
                                 "total_friends": 198,
-                                "age_of_account": 2613
+                                "age_of_account": 2995
                             }
                         }
                     ],
@@ -196,11 +196,11 @@
                                     "homeTown": "From Hod HaSharon"
                                 },
                                 "friendship_duration": 0,
-                                "mutual_friends": 6
+                                "mutual_friends": 7
                             },
                             "user": {
-                                "total_friends": 4970,
-                                "age_of_account": 4805
+                                "total_friends": 4971,
+                                "age_of_account": 4822
                             }
                         }
                     ],
@@ -217,11 +217,11 @@
                                     "homeTown": "From Haifa, Israel"
                                 },
                                 "friendship_duration": 0,
-                                "mutual_friends": 5
+                                "mutual_friends": 6
                             },
                             "user": {
-                                "total_friends": 2186,
-                                "age_of_account": 3344
+                                "total_friends": 2184,
+                                "age_of_account": 3361
                             }
                         }
                     ],
@@ -239,7 +239,7 @@
                             },
                             "user": {
                                 "total_friends": -1,
-                                "age_of_account": 2978
+                                "age_of_account": 2995
                             }
                         }
                     ]
@@ -251,12 +251,12 @@
                         "current_town": "Lives in Hod HaSharon",
                         "homeTown": "From Hod HaSharon"
                     },
-                    "friendship_duration": 697,
+                    "friendship_duration": 714,
                     "mutual_friends": 17
                 },
                 "user": {
-                    "total_friends": 394,
-                    "age_of_account": 4074
+                    "total_friends": 396,
+                    "age_of_account": 4091
                 }
             }
         ],
@@ -276,8 +276,8 @@
                                 "mutual_friends": 0
                             },
                             "user": {
-                                "total_friends": 685,
-                                "age_of_account": 4074
+                                "total_friends": 689,
+                                "age_of_account": 4091
                             }
                         }
                     ],
@@ -297,8 +297,8 @@
                                 "mutual_friends": 15
                             },
                             "user": {
-                                "total_friends": 3016,
-                                "age_of_account": 4439
+                                "total_friends": 3012,
+                                "age_of_account": 4456
                             }
                         }
                     ],
@@ -317,7 +317,7 @@
                                 "mutual_friends": 3
                             },
                             "user": {
-                                "total_friends": 2729,
+                                "total_friends": 2740,
                                 "age_of_account": 0
                             }
                         }
@@ -338,7 +338,7 @@
                             },
                             "user": {
                                 "total_friends": 2378,
-                                "age_of_account": 0
+                                "age_of_account": 4822
                             }
                         }
                     ]
@@ -350,12 +350,12 @@
                         "current_town": "Lives in Tel Aviv, Israel",
                         "homeTown": "From Pardes Hanah, Hefa, Israel"
                     },
-                    "friendship_duration": 636,
+                    "friendship_duration": 653,
                     "mutual_friends": 6
                 },
                 "user": {
-                    "total_friends": 1744,
-                    "age_of_account": 4805
+                    "total_friends": 1748,
+                    "age_of_account": 4822
                 }
             }
         ]
@@ -370,7 +370,7 @@
         "mutual_friends": 0
     },
     "user": {
-        "total_friends": 1127,
-        "age_of_account": 3455
+        "total_friends": 1126,
+        "age_of_account": 3829
     }
 }

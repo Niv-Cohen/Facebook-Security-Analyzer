@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib
-matplotlib.use ('Agg')
+
+matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 from pyvis.network import Network
 
@@ -13,7 +14,7 @@ from ..modules.Ego.Family import Family
 from ..modules.Threshold import ConnectionThreshold, Threshold, UserThreshold
 
 module_map = {"family": Family(), "colleague": Colleague(), "co_students": CoStudent(),
-         "neighbors": Neighbors(), "childhood_friends": ChildhoodFriend()}
+              "neighbors": Neighbors(), "childhood_friends": ChildhoodFriend()}
 
 
 def filter_network(thresholds, account):
@@ -34,15 +35,11 @@ def filter_network(thresholds, account):
     set_threshold(Threshold(ConnectionThreshold(mutual_friends, friendship_duration, account.connection.attributes),
                             UserThreshold(total_friends, age_of_account)), account)
     G = init_graph(account, action, float(thresholds["minimum_trust_value"]))
+    # G = init_graph(account, "Sharing", 0)
 
     G2 = Network("500px", "1000px")
     G2.from_nx(G)
-    # G2.save_graph()
-    G2.show(account.name+".html")
-    # nx.draw(G, with_labels = True, font_size=12, font_family="times new roman", bbox=dict(facecolor="red", alpha=.5))
-    # plt.savefig("../client/src/assets/"+account.name+".png")
-
-    # plt.savefig("./" + account.name + ".png")
+    G2.show(account.name + ".html")
     G.clear()
     plt.close()
 
@@ -68,30 +65,42 @@ def filter_ego_attributes(attributes):
         attributes[field] = attribute_arr
 
 
-def add_subgraph(account: Account, graph, action = None, minimum_trust_value:float = 0, connection_degree:int = 1):
+def add_subgraph(account: Account, graph, action, minimum_trust_value, connection_degree):
     for field in account.friends:
-        permission = True if module_map[field].is_permissioned(action) or action is None else False
+        print(action)
+        if connection_degree == 0:
+            permission = module_map[field].is_permissioned(action)
+            print("Permission is:" + str(permission) + " to field " + field)
+        else:
+            permission = action
         if permission:
-            for member in account.friends[field]:
-                account_trust_value = member.account_trust_value
-                if account_trust_value > minimum_trust_value:
-                    graph.add_node(member.name.split()[0])
-                    graph.add_edge(account.name.split()[0], member.name.split()[0])
-                    add_subgraph(member, graph)
+            color = "green"
+            follow_up_action = True
+        else:
+            color = "red"
+            follow_up_action = False
+        for member in account.friends[field]:
+            account_trust_value = member.account_trust_value
+            if account_trust_value < minimum_trust_value and color != "red":
+                color = "black"
+            node_title = member.name + " UTV: " + str(member.account_trust_value) \
+                         + '\nAOA: ' + str(member.user.age_of_account) + '\nTF: ' \
+                         + str(member.user.total_friends)
+            edge_title = member.name + \
+                         " MF: " + str(member.connection.mutual_friends) + \
+                         " FD: " + str(member.connection.friendship_duration)
+            graph.add_node(member.name, title = node_title)
+            graph.add_edge(account.name, member.name, title = edge_title, value = 2, color = color)
+
+            # graph.add_node(member.name, title = "node_title")
+            # graph.add_edge(account.name, member.name, title = "edge_title", value = 2, color = color)
+
+            add_subgraph(member, graph, follow_up_action, minimum_trust_value, connection_degree + 1)
 
 
-def init_graph(account=None, action = None, minimum_trust_value: float = 0):
+def init_graph(account = None, action = None, minimum_trust_value: float = 0):
     G = nx.Graph()
-    G.add_node(account.name.split()[0], value=15, color="black")
-    add_subgraph(account, G, action, minimum_trust_value)
+    print(action)
+    G.add_node(account.name, value = 20, color = "black")
+    add_subgraph(account, G, action, minimum_trust_value, connection_degree = 0)
     return G
-
-
-
-
-
-
-
-
-
-
